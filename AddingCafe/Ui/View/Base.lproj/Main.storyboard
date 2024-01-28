@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WJU-XQ-0ss">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AddingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fax-et-iUq">
+                                <rect key="frame" x="0.0" y="59" width="393" height="355"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8R-79-pfB">
+                                <rect key="frame" x="16" y="496" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mE-rx-TZ8">
+                                <rect key="frame" x="16" y="661" width="361" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="TlK-fn-zmc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mIx-J8-joZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIi-gD-BeW">
+                                <rect key="frame" x="16" y="438" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fax-et-iUq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="84m-7L-tCU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8R-79-pfB" secondAttribute="trailing" constant="16" id="BSW-Cm-z83"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9mE-rx-TZ8" secondAttribute="bottom" constant="48" id="BdA-QJ-c07"/>
+                            <constraint firstItem="tIi-gD-BeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ExP-eo-kch"/>
+                            <constraint firstItem="9mE-rx-TZ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HAo-88-yAM"/>
+                            <constraint firstItem="b8R-79-pfB" firstAttribute="top" secondItem="tIi-gD-BeW" secondAttribute="bottom" constant="24" id="P2k-mj-yNa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9mE-rx-TZ8" secondAttribute="trailing" constant="16" id="THG-LB-GBS"/>
+                            <constraint firstItem="fax-et-iUq" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.5" id="b8A-2A-Rqk"/>
+                            <constraint firstItem="tIi-gD-BeW" firstAttribute="top" secondItem="fax-et-iUq" secondAttribute="bottom" constant="24" id="el1-fO-WKl"/>
+                            <constraint firstItem="b8R-79-pfB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fNF-rW-XAZ"/>
+                            <constraint firstItem="fax-et-iUq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fjr-Lv-mpp"/>
+                            <constraint firstItem="fax-et-iUq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sHj-RS-lze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tIi-gD-BeW" secondAttribute="trailing" constant="16" id="v1E-jZ-obT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add" image="plus.app" catalog="system" id="wlU-h5-PAZ"/>
+                    <connections>
+                        <outlet property="descriptionTextfield" destination="b8R-79-pfB" id="IdZ-SZ-aPJ"/>
+                        <outlet property="mapView" destination="fax-et-iUq" id="BF3-2I-cxp"/>
+                        <outlet property="titleTextfield" destination="tIi-gD-BeW" id="ZHN-hw-VYL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011.4503816793892" y="-27.464788732394368"/>
+        </scene>
+        <!--Places-->
+        <scene sceneID="atf-nv-UJD">
+            <objects>
+                <viewController id="kuS-My-MgY" customClass="PlacesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CQB-rP-N3f">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UXw-YQ-4Ol">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bcg-rY-E9Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UXw-YQ-4Ol" firstAttribute="top" secondItem="Bcg-rY-E9Q" secondAttribute="top" id="WVd-xH-gKx"/>
+                            <constraint firstItem="Bcg-rY-E9Q" firstAttribute="bottom" secondItem="UXw-YQ-4Ol" secondAttribute="bottom" id="YeE-GA-Mua"/>
+                            <constraint firstItem="Bcg-rY-E9Q" firstAttribute="trailing" secondItem="UXw-YQ-4Ol" secondAttribute="trailing" id="cgg-8H-mkO"/>
+                            <constraint firstItem="UXw-YQ-4Ol" firstAttribute="leading" secondItem="Bcg-rY-E9Q" secondAttribute="leading" id="wbe-0N-90d"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Places" image="list.clipboard" catalog="system" id="wyg-Ll-uUT"/>
+                    <connections>
+                        <outlet property="tableView" destination="UXw-YQ-4Ol" id="20v-On-1wf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0my-uB-6Xq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011" y="622"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RCG-v5-K5J">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WJU-XQ-0ss" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vwt-ky-L6b">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ven-xH-FYh" kind="relationship" relationship="viewControllers" id="rZS-pr-wJx"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="KLb-di-yOA"/>
+                        <segue destination="kuS-My-MgY" kind="relationship" relationship="viewControllers" id="IQg-TM-CJQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="end-Ql-Aix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84.732824427480907" y="-27.464788732394368"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="Ebz-dl-Yht">
+            <objects>
+                <viewController id="ven-xH-FYh" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T5b-4R-ZYd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-2e-as0">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SZr-jg-lZb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wN1-2e-as0" firstAttribute="leading" secondItem="SZr-jg-lZb" secondAttribute="leading" id="7Fi-oI-kyT"/>
+                            <constraint firstItem="SZr-jg-lZb" firstAttribute="trailing" secondItem="wN1-2e-as0" secondAttribute="trailing" id="Co1-HT-uNs"/>
+                            <constraint firstItem="wN1-2e-as0" firstAttribute="top" secondItem="SZr-jg-lZb" secondAttribute="top" id="MKP-fb-gJU"/>
+                            <constraint firstItem="SZr-jg-lZb" firstAttribute="bottom" secondItem="wN1-2e-as0" secondAttribute="bottom" id="ihY-3t-JDY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="dim-48-9bs"/>
+                    <connections>
+                        <outlet property="mapView" destination="wN1-2e-as0" id="gOD-dR-6l5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjd-gV-M7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011" y="-664"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.clipboard" catalog="system" width="98" height="128"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
